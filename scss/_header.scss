@@ -1,0 +1,43 @@
+// HEADER.SCSS
+
+.header {
+  text-align: center;
+  position: relative;
+
+  &__background-pattern {
+    height: 50vh;
+    width: 100%;
+    display: block;
+  }
+
+  &__title-and-description-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    &__title {
+      font-size: 1.15rem;
+      color: map-get($colors, neutral, dark-desaturated-blue);
+      font-weight: map-get($font-weights, manrope, extrabold);
+      padding: 0 1rem;
+    }
+    &__description {
+      font-size: 0.85rem;
+      padding: 1rem 3rem;
+      line-height: 1.75;
+      color: map-get($colors, neutral, grayish-blue);
+      font-weight: map-get($font-weights, manrope, medium);
+    }
+  }
+
+  &__circle-design-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    z-index: 1;
+  }
+}

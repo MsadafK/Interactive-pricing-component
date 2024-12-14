@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Frontend Mentor | Interactive Pricing Component</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header" role="banner">
+      <!-- background pattern acting as background image -->
+      <img
+        src="./images/bg-pattern.svg"
+        class="header__background-pattern"
+        alt="Decorative background pattern"
+        aria-hidden="true"
+      />
+      <!-- title and description container -->
+      <div class="header__title-and-description-container">
+        <h1 class="header__title-and-description-container__title">
+          Simple, traffic-based pricing
+        </h1>
+        <p class="header__title-and-description-container__description">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+      <!-- circle design pattern -->
+      <img
+        src="./images/pattern-circles.svg"
+        class="header__circle-design-pattern"
+        alt="Decorative circles pattern"
+        aria-hidden="true"
+      />
+    </header>
+
+    <!-- main -->
+    <main class="main" role="main">
+      <!-- main section heading -->
+      <h2 class="main__heading" id="page-title">Billing page</h2>
+
+      <!-- billing container -->
+      <section class="main__billing-container" aria-labelledby="page-title">
+        <!-- hidden heading -->
+        <h3 class="main__billing-container__title" id="billing-section-title">
+          Billing container
+        </h3>
+
+        <p
+          class="main__billing-container__page-count-value"
+          id="pageview-count"
+        >
+          10k pageviews
+        </p>
+
+        <!-- form -->
+        <form
+          action="/"
+          class="main__billing-container__form"
+          aria-describedby="pageview-count"
+        >
+          <label for="pricing" class="main__billing-container__form__label">
+            Select pricing tier
+          </label>
+          <input
+            type="range"
+            id="pricing"
+            name="pricing"
+            min="1"
+            max="5"
+            step="1"
+            value="3"
+            class="main__billing-container__form__input"
+            aria-labelledby="pageview-count"
+          />
+          <button
+            type="submit"
+            class="main__billing-container__form__reload-button"
+            aria-label="Start 30-day trial"
+          >
+            Start my trial
+          </button>
+        </form>
+
+        <p class="main__billing-container__pricing-value" aria-live="polite">
+          <span
+            class="main__billing-container__pricing-value__actual-value"
+            aria-label="Price"
+          ></span>
+          <span
+            class="main__billing-container__pricing-value__monthly-or-yearly-tag"
+            aria-label="Billing period"
+          ></span>
+        </p>
+
+        <!-- toggle button container -->
+        <div
+          class="main__billing-container__monthly-or-yearly-button-container"
+          role="region"
+          aria-labelledby="billing-period-toggle"
+        >
+          <p
+            class="main__billing-container__monthly-or-yearly-button-container__monthly-billing-text"
+            id="monthly-billing-label"
+          >
+            Monthly Billing
+          </p>
+          <button
+            type="button"
+            role="switch"
+            aria-checked="false"
+            class="main__billing-container__monthly-or-yearly-button-container__monthly-or-yearly-button"
+            id="billing-period-toggle"
+            aria-labelledby="monthly-billing-label yearly-billing-label"
+          ></button>
+
+          <p
+            class="main__billing-container__monthly-or-yearly-button-container__yearly-billing-text"
+            id="yearly-billing-label"
+          >
+            Yearly Billing <span class="discount-text-span">-25%</span>
+          </p>
+        </div>
+
+        <!-- subscription features -->
+        <div
+          class="main__billing-container__subscription-features"
+          role="list"
+          aria-label="Subscription features"
+        >
+          <p role="listitem">
+            <span
+              ><img src="./images/icon-check.svg" alt="" aria-hidden="true"
+            /></span>
+            Unlimited websites
+          </p>
+          <p role="listitem">
+            <span
+              ><img src="./images/icon-check.svg" alt="" aria-hidden="true"
+            /></span>
+            100% data ownership
+          </p>
+          <p role="listitem">
+            <span
+              ><img src="./images/icon-check.svg" alt="" aria-hidden="true"
+            /></span>
+            Email reports
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+// MAINX.SCSS
+
+.main {
+  background-color: map-get($colors, neutral, white);
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  border-radius: 5px;
+  // border: 1px solid blue;
+  box-shadow: 0px 5px 15px 5px map-get($colors, neutral, light-grayish-bluex);
+
+  &__heading {
+    display: none;
+  }
+
+  &__billing-container {
+    display: grid;
+    &__title {
+      display: none;
+    }
+
+    &__page-count-value {
+      align-self: CENTER;
+      text-align: center;
+      padding-top: 1rem;
+      color: map-get($colors, neutral, grayish-blue);
+      font-weight: map-get($font-weights, manrope, bold);
+    }
+
+    &__form {
+      position: relative;
+      padding: 2rem 0;
+
+      &__label {
+        display: none;
+      }
+
+      &__input {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &__input::-webkit-slider-thumb {
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        background: url("images/icon-slider.svg") no-repeat center center;
+        background-size: cover;
+      }
+
+      &__reload-button {
+        position: absolute;
+        right: 10%;
+        transform: translateX(-50%);
+        // top: 625%;
+        top: 400%;
+        border-radius: 20px;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: map-get($colors, neutral, light-grayish-bluex);
+        font-size: 0.85rem;
+        font-weight: map-get($font-weights, manrope, bold);
+        background-color: map-get($colors, neutral, dark-desaturated-blue);
+        cursor: pointer;
+      }
+    }
+
+    &__pricing-value {
+      align-self: center;
+      text-align: center;
+      padding-bottom: 1rem;
+      color: map-get($colors, neutral, grayish-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+
+      &__actual-value {
+        font-size: 1.85rem;
+        font-weight: map-get($font-weights, manrope, bold);
+        color: black;
+      }
+    }
+
+    &__monthly-or-yearly-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 0.8rem;
+        color: map-get($colors, neutral, grayish-blue);
+      }
+
+      &__monthly-or-yearly-button {
+        width: 60px;
+        height: 30px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 15px;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+      }
+
+      &__monthly-or-yearly-button::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.2s ease;
+      }
+
+      &__monthly-or-yearly-button.active::after {
+        transform: translateX(30px);
+      }
+
+      &__monthly-or-yearly-button:hover {
+        background-color: map-get($colors, primary, soft-cyan);
+      }
+
+      &__yearly-billing-text {
+        .discount-text-span {
+          background-color: map-get($colors, primary, light-grayish-red);
+          color: map-get($colors, primary, light-red);
+          padding: 0.25rem;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    &__subscription-features {
+      padding: 1rem;
+      padding-bottom: 5rem;
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: map-get($colors, neutral, grayish-blue);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+// BASE.SCSS
+
+body {
+  background-color: map-get($colors, neutral, very-pale-blue);
+  position: relative;
+}
